@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} My store {% endblock %}
+{%block content%}
+<h2>Message Create Test</h2>
+<form method="POST"  action="test/send">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="送出"><p>
+        <input type="reset" value="取消"><p>
+        <p><a href="/Message">檢視資料庫</a></p>
+        <p><a href="/Message/create">返回創建頁面</a></p>
+
+</form>
+{% endblock %}

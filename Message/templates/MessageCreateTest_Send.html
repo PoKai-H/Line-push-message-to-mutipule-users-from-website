@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} My store {% endblock %}
+{%block content%}
+    <h2>送出內文如下</h2>
+    {%for key in post%}
+    <p>{{key}}</p>
+    {%endfor%}
+    <p><a href="/Message">檢視資料庫</a></p>
+    <p><a href="/Message/create">返回創建</a></p>
+
+
+{% endblock %}

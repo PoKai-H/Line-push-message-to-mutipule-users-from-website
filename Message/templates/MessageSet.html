@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} My store {% endblock %}
+{%block content%}
+<p><a href="/Message/create">前往創建</a></p>
+{% for mlist in message_list %}
+     
+       <h3>group:{{mlist.group}}</h3>
+       <h3>message_title : {{mlist.message_title}}</h3>
+       <ul>
+            <li>專案內文 : {{mlist.message_push}}</li>
+           
+       </ul>
+       
+       
+          {% csrf_token %}
+       {% endfor %}
+       
+{% endblock %}
